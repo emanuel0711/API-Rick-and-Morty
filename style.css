@@ -1,0 +1,205 @@
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a2e;
+    color: #e6e6e6;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #16213e;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #4cc9f0;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+/* Seção de Busca */
+.search-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #16213e;
+    border-radius: 10px;
+}
+
+#search-form {
+    display: flex;
+    gap: 10px;
+}
+
+#character-name {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #0f3460;
+    color: white;
+}
+
+#character-name::placeholder {
+    color: #a1a1a1;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4cc9f0;
+    color: #16213e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #3a86ff;
+    transform: translateY(-2px);
+}
+
+/* Seção de Resultados */
+.results-section {
+    min-height: 300px;
+}
+
+#loading {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.loader {
+    border: 5px solid #0f3460;
+    border-top: 5px solid #4cc9f0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Cards de Personagens */
+.character-card {
+    background-color: #16213e;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+}
+
+.character-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.character-info {
+    padding: 20px;
+}
+
+.character-name {
+    color: #4cc9f0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.character-details {
+    margin-bottom: 8px;
+}
+
+.status {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-alive {
+    background-color: #55cc44;
+}
+
+.status-dead {
+    background-color: #ff0000;
+}
+
+.status-unknown {
+    background-color: #9e9e9e;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    color: #a1a1a1;
+}
+
+footer a {
+    color: #4cc9f0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #search-form {
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Grid de Personagens */
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Mensagem de erro */
+.error-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #0f3460;
+    border-radius: 10px;
+    color: #ff6b6b;
+}

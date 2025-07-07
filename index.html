@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty Character Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Rick and Morty Character Search</h1>
+            <p>Encontre informações sobre seus personagens favoritos</p>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <form id="search-form">
+                    <input type="text" id="character-name" placeholder="Digite o nome do personagem" required>
+                    <button type="submit">Buscar</button>
+                </form>
+            </section>
+
+            <section class="results-section">
+                <div id="loading" class="hidden">
+                    <div class="loader"></div>
+                    <p>Procurando no multiverso...</p>
+                </div>
+                
+                <div id="results-container">
+                    <!-- Os resultados serão inseridos aqui pelo JavaScript -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Dados fornecidos pela <a href="https://rickandmortyapi.com/" target="_blank">Rick and Morty API</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
